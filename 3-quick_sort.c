@@ -9,7 +9,7 @@
 void swap(int *x, int *y)
 {
 	int tmp;
-	
+
 	tmp = *x;
 	*x = *y;
 	*y = tmp;
@@ -21,12 +21,13 @@ void swap(int *x, int *y)
  * @low: var
  * @high: func
  * @size: func
+ * Return: index of p
  */
 
 int partition(int *array, int low, int high, size_t size)
 {
 	int p = array[high];
-	int i = low -1, j;
+	int i = low - 1, j;
 
 	for (j = low; j < high; j++)
 	{
@@ -49,9 +50,8 @@ int partition(int *array, int low, int high, size_t size)
 }
 
 /**
- *
  * quick_sort_rec - sorts an array
- * @array: array to be sorted 
+ * @array: array to be sorted
  * @low: low index
  * @high: high index
  * @size: size of the array
@@ -70,7 +70,8 @@ void quick_sort_rec(int *array, int low, int high, size_t size)
 }
 
 /**
- * quick_srt - sorts an array of integers in ascending order using the Quick sort algorithm
+ * quick_sort - sorts an array of integers in ascending order
+ * using the Quick sort algorithm
  * @array: var
  * @size: size of the array
  */
